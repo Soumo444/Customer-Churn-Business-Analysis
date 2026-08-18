@@ -1,103 +1,66 @@
-# 📊 Customer Churn Business Analysis Project
+# 📊 Customer Churn Business Analysis
 
-An end-to-end customer churn analysis solution — from raw data collection through cleaning, exploratory analysis, database engineering, predictive modeling, and interactive dashboarding. Built to help business stakeholders understand **why customers leave** and **who is likely to leave next**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Streamlit-1.61.1-red?style=for-the-badge&logo=streamlit" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Scikit--Learn-1.7.2-orange?style=for-the-badge&logo=scikit-learn" alt="Scikit-Learn">
+  <img src="https://img.shields.io/badge/XGBoost-Enabled-green?style=for-the-badge" alt="XGBoost">
+</p>
 
 ---
 
-## 🚀 Overview
+## 🎯 Project Overview
+This project provides a comprehensive end-to-end business analysis of **Customer Churn**. It covers everything from raw data collection and cleaning to advanced exploratory data analysis (EDA), root cause analysis, and finally, a machine learning predictive model deployed as an interactive dashboard.
 
-This project delivers a complete churn analytics pipeline that combines **SQL-based data engineering**, **Python-driven analytics and machine learning**, and **Power BI visualization** into a single, cohesive workflow — turning raw customer data into actionable business insight.
+## 🚀 Key Features
+*   **Data Pipeline:** Automated data collection and cleaning from raw sources.
+*   **Deep Analytics:** SQL-driven KPI, Revenue, and Churn analysis.
+*   **Predictive Modeling:** High-accuracy churn prediction using Machine Learning (XGBoost & RandomForest).
+*   **Interactive Dashboard:** Real-time customer churn insights via **Streamlit**.
 
 ---
 
-## 🗂️ Project Structure
-
-```
-├── DATA COLLECTION/           # Raw datasets used for the analysis
-├── EXCEL DATA PROFILING/      # Initial data quality checks and profiling
-├── MYSQL/                     # Database scripts (setup → analysis)
-│   ├── 01_DATABASE_SETUP.sql
-│   ├── 02_Table_Creation.sql
-│   ├── 03_Data_Import.sql
-│   ├── 04_Data_Quality_Audit.sql
-│   ├── 06_KPI_Analysis.sql
-│   ├── 07_...
-│   ├── 08_...
-│   └── 09_Root_Cause_Analysis.sql
-├── POWERBI_DASHBOARD/         # Power BI project file (.pbix)
-├── python-analytics/          # Python analysis & modeling
-│   ├── 01_mysql_connection.ipynb
-│   ├── 02_Exploratory_Data_Analysis.ipynb
-│   ├── 03_Root_Cause_Analysis.ipynb
-│   ├── 04_Machine_Learning_Model.ipynb
-│   └── churn_model.pkl
-├── app.py                     # Application script
-└── requirements.txt           # Python dependencies
+## 📂 Project Structure
+```text
+CUSTOMER_CHURN_BUSINESS_ANALYSIS/
+├── DATA_COLLECTION/        # Raw data and source files
+├── EXCEL_DATA_PROFILING/   # Initial data health checks
+├── MySQL/                  # SQL scripts for business logic
+├── POWERBI_DASHBOARD/      # Visual report files
+├── python-analytics/       # EDA and ML Jupyter Notebooks
+├── app.py                  # Streamlit application
+├── churn_model.pkl         # Trained predictive model
+└── requirements.txt        # Project dependencies
 ```
 
----
+## 📈 Tech Stack
+*   **Language:** Python 3.11
+*   **ML Library:** Scikit-learn, XGBoost
+*   **Dashboard:** Streamlit
+*   **Database:** MySQL
+*   **Visualization:** PowerBI, Seaborn, Matplotlib
 
-## 🧩 Module Breakdown
-
-### 🗄️ MYSQL — Data Engineering
-| Script | Purpose |
-|---|---|
-| `01_DATABASE_SETUP.sql` | Initializes the database |
-| `02_Table_Creation.sql` | Defines the schema |
-| `03_Data_Import.sql` | Imports processed data |
-| `04_Data_Quality_Audit.sql` | Ensures data integrity |
-| `06_KPI_Analysis.sql` → `09_Root_Cause_Analysis.sql` | Business intelligence and churn driver queries |
-
-### 🐍 python-analytics — Analysis & Modeling
-| Notebook | Purpose |
-|---|---|
-| `01_mysql_connection.ipynb` | Connects to the MySQL database |
-| `02_Exploratory_Data_Analysis.ipynb` | Visualizes trends and patterns |
-| `03_Root_Cause_Analysis.ipynb` | Identifies key churn drivers |
-| `04_Machine_Learning_Model.ipynb` | Trains and evaluates the churn prediction model |
-| `churn_model.pkl` | Saved, ready-to-use ML model |
-
-### 📈 POWERBI_DASHBOARD
-Interactive `.pbix` dashboard designed for business stakeholders to explore churn KPIs, trends, and segments visually.
+## 🌐 Live Application
+Experience the dashboard here:
+👉 **[Click to Open Customer Churn Dashboard](https://customer-churn-business-analysis-vtb7gvwpkvhdrtjpddnz62.streamlit.app/)**
 
 ---
 
-## ✨ Key Features
+## 🛠 Setup Instructions
+To run this project locally:
 
-- 🛠️ **Data Engineering** — Robust SQL pipelines for cleaning, structuring, and preparing raw data
-- 🔍 **Exploratory Data Analysis (EDA)** — In-depth Python analysis to uncover churn drivers
-- 🤖 **Predictive Modeling** — Machine learning model to forecast future customer churn
-- 📊 **Dashboarding** — Interactive Power BI dashboard for real-time business insight
-
----
-
-## ⚙️ Getting Started
-
-### 1. Database Setup
-Ensure MySQL is running, then execute the scripts in the `MYSQL/` folder in order to set up the database and import the data.
-
-### 2. Environment Setup
-Install all required Python dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the Analysis
-Launch and run the notebooks in `python-analytics/` in sequence to explore the data, uncover churn drivers, and train the predictive model.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Soumo444/Customer-Churn-Business-Analysis.git
+   ```
+2. **Install requirements:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the app:**
+   ```bash
+   streamlit run app.py
+   ```
 
 ---
-
-## 🧰 Tech Stack
-
-`MySQL` · `Python` (Pandas, Scikit-learn, Jupyter) · `Power BI` · `SQL`
-
----
-
-## 📌 Notes
-
-- Run the SQL scripts sequentially — each stage builds on the previous one.
-- Notebooks should also be run in numerical order for a smooth workflow, from database connection through to model training.
-
----
-
-<p align="center"><i>Built for data-driven decision making around customer retention.</i></p>
+*Created by [Soumo444](https://github.com/Soumo444)*
