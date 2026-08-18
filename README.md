@@ -1,34 +1,103 @@
-# Customer Churn Business Analysis Project
+# 📊 Customer Churn Business Analysis Project
 
-This project provides an end-to-end analysis of customer churn, covering data collection, cleaning, exploratory data analysis (EDA), database management, and dashboard creation[cite: 1].
+An end-to-end customer churn analysis solution — from raw data collection through cleaning, exploratory analysis, database engineering, predictive modeling, and interactive dashboarding. Built to help business stakeholders understand **why customers leave** and **who is likely to leave next**.
 
-## Project Structure
+---
 
-- **DATA COLLECTION**: Raw datasets used for the analysis[cite: 1].
-- **EXCEL DATA PROFILING**: Initial data quality checks and profiling[cite: 1].
-- **MYSQL**: Database scripts for setup, table creation, data importing, quality auditing, and analysis[cite: 1]:
-    - `01_DATABASE_SETUP.sql`: Database initialization[cite: 1].
-    - `02_Table_Creation.sql`: Schema definition[cite: 1].
-    - `03_Data_Import.sql`: Importing processed data[cite: 1].
-    - `04_Data_Quality_Audit.sql`: Ensuring data integrity[cite: 1].
-    - `06_KPI_Analysis.sql` to `09_Root_Cause_Analysis.sql`: SQL scripts for business intelligence[cite: 1].
-- **POWERBI_DASHBOARD**: Contains the Power BI project file (`.pbix`) for visualization[cite: 1].
-- **python-analytics**: Python-based analysis and modeling[cite: 1]:
-    - `01_mysql_connection.ipynb`: Establishing connection to MySQL[cite: 1].
-    - `02_Exploratory_Data_Analysis.ipynb`: Data visualization and insights[cite: 1].
-    - `03_Root_Cause_Analysis.ipynb`: Finding churn drivers[cite: 1].
-    - `04_Machine_Learning_Model.ipynb`: Predicting customer churn[cite: 1].
-    - `churn_model.pkl`: Saved machine learning model[cite: 1].
-- **app.py**: Application script[cite: 1].
-- **requirements.txt**: List of Python dependencies[cite: 1].
+## 🚀 Overview
 
-## Key Features
-- **Data Engineering**: Robust SQL pipelines for data cleaning and preparation[cite: 1].
-- **Exploratory Data Analysis (EDA)**: Comprehensive Python analysis to understand churn drivers[cite: 1].
-- **Predictive Modeling**: Machine learning implementation to forecast future churn[cite: 1].
-- **Dashboarding**: Interactive Power BI dashboard for business stakeholders[cite: 1].
+This project delivers a complete churn analytics pipeline that combines **SQL-based data engineering**, **Python-driven analytics and machine learning**, and **Power BI visualization** into a single, cohesive workflow — turning raw customer data into actionable business insight.
 
-## Getting Started
-1. **Database Setup**: Ensure MySQL is running. Use the scripts in the `MYSQL` folder to set up the database and import data[cite: 1].
-2. **Environment**: Install dependencies: `pip install -r requirements.txt`[cite: 1].
-3. **Analytics**: Run the Jupyter notebooks in `python-analytics` to explore data and train models[cite: 1].
+---
+
+## 🗂️ Project Structure
+
+```
+├── DATA COLLECTION/           # Raw datasets used for the analysis
+├── EXCEL DATA PROFILING/      # Initial data quality checks and profiling
+├── MYSQL/                     # Database scripts (setup → analysis)
+│   ├── 01_DATABASE_SETUP.sql
+│   ├── 02_Table_Creation.sql
+│   ├── 03_Data_Import.sql
+│   ├── 04_Data_Quality_Audit.sql
+│   ├── 06_KPI_Analysis.sql
+│   ├── 07_...
+│   ├── 08_...
+│   └── 09_Root_Cause_Analysis.sql
+├── POWERBI_DASHBOARD/         # Power BI project file (.pbix)
+├── python-analytics/          # Python analysis & modeling
+│   ├── 01_mysql_connection.ipynb
+│   ├── 02_Exploratory_Data_Analysis.ipynb
+│   ├── 03_Root_Cause_Analysis.ipynb
+│   ├── 04_Machine_Learning_Model.ipynb
+│   └── churn_model.pkl
+├── app.py                     # Application script
+└── requirements.txt           # Python dependencies
+```
+
+---
+
+## 🧩 Module Breakdown
+
+### 🗄️ MYSQL — Data Engineering
+| Script | Purpose |
+|---|---|
+| `01_DATABASE_SETUP.sql` | Initializes the database |
+| `02_Table_Creation.sql` | Defines the schema |
+| `03_Data_Import.sql` | Imports processed data |
+| `04_Data_Quality_Audit.sql` | Ensures data integrity |
+| `06_KPI_Analysis.sql` → `09_Root_Cause_Analysis.sql` | Business intelligence and churn driver queries |
+
+### 🐍 python-analytics — Analysis & Modeling
+| Notebook | Purpose |
+|---|---|
+| `01_mysql_connection.ipynb` | Connects to the MySQL database |
+| `02_Exploratory_Data_Analysis.ipynb` | Visualizes trends and patterns |
+| `03_Root_Cause_Analysis.ipynb` | Identifies key churn drivers |
+| `04_Machine_Learning_Model.ipynb` | Trains and evaluates the churn prediction model |
+| `churn_model.pkl` | Saved, ready-to-use ML model |
+
+### 📈 POWERBI_DASHBOARD
+Interactive `.pbix` dashboard designed for business stakeholders to explore churn KPIs, trends, and segments visually.
+
+---
+
+## ✨ Key Features
+
+- 🛠️ **Data Engineering** — Robust SQL pipelines for cleaning, structuring, and preparing raw data
+- 🔍 **Exploratory Data Analysis (EDA)** — In-depth Python analysis to uncover churn drivers
+- 🤖 **Predictive Modeling** — Machine learning model to forecast future customer churn
+- 📊 **Dashboarding** — Interactive Power BI dashboard for real-time business insight
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Database Setup
+Ensure MySQL is running, then execute the scripts in the `MYSQL/` folder in order to set up the database and import the data.
+
+### 2. Environment Setup
+Install all required Python dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the Analysis
+Launch and run the notebooks in `python-analytics/` in sequence to explore the data, uncover churn drivers, and train the predictive model.
+
+---
+
+## 🧰 Tech Stack
+
+`MySQL` · `Python` (Pandas, Scikit-learn, Jupyter) · `Power BI` · `SQL`
+
+---
+
+## 📌 Notes
+
+- Run the SQL scripts sequentially — each stage builds on the previous one.
+- Notebooks should also be run in numerical order for a smooth workflow, from database connection through to model training.
+
+---
+
+<p align="center"><i>Built for data-driven decision making around customer retention.</i></p>
