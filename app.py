@@ -12,7 +12,8 @@ st.set_page_config(
 # Load Trained Model
 @st.cache_resource
 def load_model():
-  return joblib.load("churn_model.pkl")
+  # Pointing to the file inside your python-analytics folder
+  return joblib.load("python-analytics/churn_model.pkl")
 
 
 model = load_model()
