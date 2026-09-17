@@ -23,15 +23,39 @@ This project provides a comprehensive end-to-end business analysis of **Customer
 ## 📂 Project Structure
 ```text
 CUSTOMER_CHURN_BUSINESS_ANALYSIS/
-├── DATA_COLLECTION/        # Raw data and source files
-├── EXCEL_DATA_PROFILING/   # Initial data health checks
-├── MySQL/                  # SQL scripts for business logic
-├── POWERBI_DASHBOARD/      # Visual report files
-├── python-analytics/       # EDA and ML Jupyter Notebooks
-├── app.py                  # Streamlit application
-├── churn_model.pkl         # Trained predictive model
-└── requirements.txt        # Project dependencies
+├── .devcontainer/
+│   └── devcontainer.json
+├── 1_DATA_COLLECTION/
+│   └── customer_churn_raw.csv
+├── 2_EXCEL_DATA_PROFILING/
+│   └── Data_Profiling.xlsx
+├── 3_MySQL/
+│   ├── 01_DATABASE_SETUP.SQL
+│   ├── 02_Table_Creation.sql
+│   ├── 03_Data_Import.sql
+│   ├── 04_Data_Quality_Audit.sql
+│   ├── 06_KPI_Analysis.sql
+│   ├── 07_Churn_Analysis.sql
+│   ├── 08_Revenue_Analysis.sql
+│   ├── 09_Root_Cause_Analysis.sql
+│   └── 10_Views.sql
+├── 4_python-analytics/
+│   ├── plots/
+│   ├── 01_mysql_connection.ipynb
+│   ├── 02_Exploratory_Data_Analysis.ipynb
+│   ├── 03_Root_Cause_Analysis.ipynb
+│   └── 04_Machine_Learning_Model.ipynb
+├── 5_POWERBI_DASHBOARD/
+│   └── CUSTOMER_CHURN_ANALYSIS - Dashboard.pbix
+├── app.py                  # 🚀 Main Streamlit app (used in production)
+├── app_backup.py           # 🗄️ Local backup copy (not used by the web app)
+├── churn_model.pkl
+├── README.md
+├── requirements.txt
+└── runtime.txt
 ```
+
+> 📝 **Note:** `app_backup.py` is a simple backup copy of the main application kept for safekeeping. It is **not** used or deployed by the live Streamlit web interface — only `app.py` powers the app.
 
 ## 📈 Tech Stack
 *   **Language:** Python 3.11
